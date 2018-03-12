@@ -1,0 +1,11 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import './css/styles.css'
+import './css/bootstrap.css';
+import './font-awesome-4.7.0/css/font-awesome.css';
+import {App} from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
