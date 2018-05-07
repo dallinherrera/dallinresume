@@ -7,7 +7,13 @@ export class App extends React.Component {
 
   constructor(props) {
     super(props);
-    const english = {
+    this.english = {
+      headers: {
+        header1: "JOB",
+        header2: "SKILLS",
+        header3: "PROJECTS",
+        header4: "CERTIFICATES",
+      },
       about: "My name is Dallin Herrera. I'm a Web Developer. I am 28 years old, passionate about technology, knowledge, art, creativity, order. I like to improve myself through studying, practicing sports and overcoming personal or team challenges, because I have the ability to achieve anything that I propose through discipline and perseverance.",
       contact: "E-mail: dallinherrera@gmail.com, Cel: (044) 771-134-7276.",
       education: "Bachelor of Information and Communications Technology",
@@ -87,13 +93,13 @@ export class App extends React.Component {
         }
       ]
     };
-
-    this.state = { lang: english };
-    this.changeToSpanish = this.changeToSpanish.bind(this);
-  }
-
-  changeToSpanish(e) {
-    const espanol = {
+    this.espanol = {
+      headers: {
+        header1: "HISTORIAL DE EMPLEO",
+        header2: "HABILIDADES",
+        header3: "PROYECTOS",
+        header4: "CERTIFICADOS",
+      },
       about: "Mi nombre es Dallin Herrera. Soy un Web Developer. Tengo 28 años de edad, soy apasionado de la tecnología, el conocimiento, el arte, la creatividad, el orden. Me gusta superarme a mi mismo mediante el estudio, la practica de deportes y los retos personales o en equipo, porque tengo la habilidad de lograr cualquier cosa que me proponga mediante la disciplina y la perseverancia.",
       contact: "E-mail: dallinherrera@gmail.com, Cel: (044) 771-134-7276.",
       education: "Diplomado en Programacion Web",
@@ -102,7 +108,7 @@ export class App extends React.Component {
       work: [
         {
           title: "Freelancer",
-          company: "Negocio Propio",
+          company: "Propietario",
           period: "Enero 2017 - Today",
           descrip: "Diseño y desarrollo de paginas web responsivas."
         },
@@ -173,7 +179,17 @@ export class App extends React.Component {
         }
       ]
     };
-    this.setState( {lang: espanol});
+    this.state = { lang: this.english };
+    this.changeToSpanish = this.changeToSpanish.bind(this);
+    this.changeToEnglish = this.changeToEnglish.bind(this);
+  }
+
+  changeToSpanish(e) {
+    this.setState({lang: this.espanol});
+  }
+
+  changeToEnglish(e) {
+    this.setState({lang: this.english});
   }
 
   render() {
@@ -181,7 +197,7 @@ export class App extends React.Component {
 
     return (
       <div>
-        <Header clicking={this.changeToSpanish}/>
+        <Header toEnglish={this.changeToEnglish} toSpanish={this.changeToSpanish} info={this.state.lang}/>
         <Content info={this.state.lang}/>
         <Footer />
       </div>

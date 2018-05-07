@@ -1,7 +1,7 @@
 import React from 'react';
-import {BtnLang} from './BtnLang';
+import BtnLang from './BtnLang';
 import Brand from './Brand';
-import {Navigation} from './Navigation';
+import Navigation from './Navigation';
 
 export class Header extends React.Component {
   render() {
@@ -10,10 +10,11 @@ export class Header extends React.Component {
         <div className="container-fluid header_nav">
           <Brand />
           <div style={{float: 'right'}}>
-            <BtnLang lang='ES' clicking={this.props.clicking}/>
+            <BtnLang langText='EN' clicking={this.props.toEnglish}/>
+            <BtnLang langText='ES' clicking={this.props.toSpanish}/>
           </div>
         </div>
-        <Navigation />
+        <Navigation info={this.props.info}/>
       </div>
     );
   }

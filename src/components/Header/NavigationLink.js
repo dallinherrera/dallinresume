@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class NavigationLink extends React.Component {
+class NavigationLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,8 +9,10 @@ export class NavigationLink extends React.Component {
   render() {
     return (
       <div className="col-xs-6 col-sm-3 text-center">
-        <a className="navigationLink" href={"index.html#" + this.props.link}>{this.props.titulo}</a>
+        <a className="navigationLink" href={"index.html#" + this.props.link}>{this.props.linkText}</a>
       </div>
     );
   }
 }
+
+export default NavigationLink;

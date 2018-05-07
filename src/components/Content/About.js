@@ -1,7 +1,7 @@
 import React from 'react';
-import {Photo} from './Photo';
+import Photo from './Photo';
 
-export class About extends React.Component {
+class About extends React.Component {
   render() {
     return(
       <div className="row" id="about">
@@ -15,3 +15,5 @@ export class About extends React.Component {
     );
   }
 }
+
+export default About;

@@ -1,7 +1,7 @@
 import React from 'react';
-import {NavigationLink} from './NavigationLink';
+import NavigationLink from './NavigationLink';
 
-export class Navigation extends React.Component {
+class Navigation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,11 +10,13 @@ export class Navigation extends React.Component {
   render() {
     return (
       <div style={{borderBottom:'solid 1px #000d36'}}>
-        <NavigationLink titulo="WORK" link="work"/>
-        <NavigationLink titulo="SKILLS" link="skills"/>
-        <NavigationLink titulo="PROJECTS" link="projects"/>
-        <NavigationLink titulo="CERTIFICATES" link="certificates"/>
+        <NavigationLink linkText={this.props.info.headers.header1} link={this.props.info.headers.header1}/>
+        <NavigationLink linkText={this.props.info.headers.header2} link={this.props.info.headers.header2}/>
+        <NavigationLink linkText={this.props.info.headers.header3} link={this.props.info.headers.header3}/>
+        <NavigationLink linkText={this.props.info.headers.header4} link={this.props.info.headers.header4}/>
       </div>
     );
   }
 }
+
+export default Navigation;
