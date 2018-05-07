@@ -1,12 +1,13 @@
 import React from 'react';
 
 class Work extends React.Component {
+
   render() {
-    return(
+    return (
       <div>
         <h2>{this.props.workInfo.title}</h2>
         <h4>{this.props.workInfo.company}</h4>
-        <date>{this.props.workInfo.period}</date>
+        <span>{this.props.workInfo.period}</span>
         <p>{this.props.workInfo.descrip}</p>
       </div>
     );

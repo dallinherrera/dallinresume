@@ -5,7 +5,7 @@ class ProjectsBox extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        {this.props.info.map(project => <Projects ProjectsInfo={project} />)}
+        {this.props.info.map((project, index) => <Projects key={index} ProjectsInfo={project} />)}
       </div>
     );
   }

@@ -5,7 +5,7 @@ class SkillsBox extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        {this.props.info.map(skill => <Skills skillsInfo={skill} />)}
+        {this.props.info.map((skill, index)  => <Skills key={index} skillsInfo={skill} />)}
       </div>
     );
   }

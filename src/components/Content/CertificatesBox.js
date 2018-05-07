@@ -5,7 +5,7 @@ class CertificatesBox extends React.Component {
   render() {
     return (
       <div className="jumbotron">
-        {this.props.info.map(certificate => <Certificates CertificatesInfo={certificate} />)}
+        {this.props.info.map((certificate, index) => <Certificates key={index} CertificatesInfo={certificate} />)}
       </div>
     );
   }

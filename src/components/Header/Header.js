@@ -10,7 +10,7 @@ export class Header extends React.Component {
         <div className="container-fluid header_nav">
           <Brand />
           <div style={{float: 'right'}}>
-            <BtnLang id="es" lang='ES'/>
+            <BtnLang lang='ES' clicking={this.props.clicking}/>
           </div>
         </div>
         <Navigation />
