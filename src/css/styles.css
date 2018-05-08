@@ -8,29 +8,43 @@
 }
 
 .header_nav {
-	color: #fff;
 	background-color: var(--azulHeader) !important;
-}
-.header_nav a {
-	color: #fff !important;
-}
-.header_nav a:hover {
-	 color: var(--azulAceroClaro);
 }
 
 .idioma_btn {
+	color: #fff !important;
 	border: 1px solid #fff;
 	border-radius: 25px;
 	padding: 10px 11px;
 	margin: 5px 5px;
 	display: inline-block;
+	font-weight: bold;
 }
 
 .idioma_btn:hover {
 	color: var(--azulHeader) !important;
+	background-color: #7aa7e2 !important;
+	text-decoration: none;
+	font-weight: bold;
+	font-weight: bold;
+}
+
+.idioma_btn_active {
+	color: var(--azulHeader) !important;
+	border: 1px solid #fff;
+	border-radius: 25px;
+	padding: 10px 11px;
+	margin: 5px 5px;
+	display: inline-block;
 	background-color: var(--azulAceroClaro) !important;
 	text-decoration: none;
 	font-weight: bold;
+}
+	.idioma_btn_active:hover {
+		color: var(--azulHeader) !important;
+		background-color: #7aa7e2 !important;
+		text-decoration: none;
+		font-weight: bold;
 }
 
 .h2_style {

@@ -3,15 +3,15 @@ import BtnLang from './BtnLang';
 import Brand from './Brand';
 import Navigation from './Navigation';
 
-export class Header extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <div>
         <div className="container-fluid header_nav">
           <Brand />
           <div style={{float: 'right'}}>
-            <BtnLang langText='EN' clicking={this.props.toEnglish}/>
-            <BtnLang langText='ES' clicking={this.props.toSpanish}/>
+            <BtnLang langText='EN' clicking={this.props.toEnglish} btnClass="idioma_btn_active" id="btnEnglish"/>
+            <BtnLang langText='ES' clicking={this.props.toSpanish} btnClass="idioma_btn" id="btnSpanish"/>
           </div>
         </div>
         <Navigation info={this.props.info}/>
@@ -19,3 +19,5 @@ export class Header extends React.Component {
     );
   }
 }
+
+export default Header;

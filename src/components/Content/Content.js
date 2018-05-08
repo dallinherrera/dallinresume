@@ -6,7 +6,7 @@ import SkillsBox from './SkillsBox';
 import ProjectsBox from './ProjectsBox';
 import CertificatesBox from './CertificatesBox';
 
-export class Content extends React.Component {
+class Content extends React.Component {
 
   render() {
     const info = this.props.info;
@@ -37,3 +37,5 @@ export class Content extends React.Component {
     );
   }
 }
+
+export default Content;

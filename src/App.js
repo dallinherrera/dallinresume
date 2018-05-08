@@ -1,7 +1,7 @@
 import React from 'react';
-import {Header} from './components/Header/Header';
-import {Content} from './components/Content/Content';
-import {Footer} from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Content from './components/Content/Content';
+import Footer from './components/Footer/Footer';
 
 export class App extends React.Component {
 
@@ -186,10 +186,15 @@ export class App extends React.Component {
 
   changeToSpanish(e) {
     this.setState({lang: this.espanol});
+    document.getElementById('btnEnglish').className="idioma_btn";
+    document.getElementById('btnSpanish').className="idioma_btn_active";
   }
 
   changeToEnglish(e) {
     this.setState({lang: this.english});
+    document.getElementById('btnSpanish').className="idioma_btn";
+    document.getElementById('btnEnglish').className="idioma_btn_active";
+
   }
 
   render() {
