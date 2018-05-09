@@ -8,7 +8,7 @@ class Header extends React.Component {
     return (
       <div>
         <div className="container-fluid header_nav">
-          <Brand />
+          <Brand src={this.props.src}/>
           <div style={{float: 'right'}}>
             <BtnLang langText='EN' clicking={this.props.toEnglish} btnClass="idioma_btn_active" id="btnEnglish"/>
             <BtnLang langText='ES' clicking={this.props.toSpanish} btnClass="idioma_btn" id="btnSpanish"/>

@@ -9,7 +9,7 @@ class NavigationLink extends React.Component {
   render() {
     return (
       <div className="col-xs-6 col-sm-3 text-center">
-        <a className="navigationLink" href={"index.html#" + this.props.link}>{this.props.linkText}</a>
+        <a className="navigationLink" href={"index.html#" + this.props.link} style={{margin:'3px'}}>{this.props.linkText}</a>
       </div>
     );
   }

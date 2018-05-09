@@ -24,20 +24,13 @@ export class App extends React.Component {
           title: "Freelancer",
           company: "My own",
           period: "Jan 2017 - Today",
-          descrip: "Design and develop of responsive Web Pages."
+          descrip: "Design, architecture and develop of responsive Web applications ."
         },
         {
-          title: "Front-end Developer",
+          title: "Front-End Developer",
           company: "AVIZ",
           period: "Jan 2016 - Oct 2016",
           descrip: "Design and develop HTML structure and responsive Styles in CSS."
-        },
-
-        {
-          title: "GOD",
-          company: "SkyRocket",
-          period: "Pasado - Futuro",
-          descrip: "Disign and arquitecture of the planet Earth."
         }
       ],
 
@@ -95,7 +88,7 @@ export class App extends React.Component {
     };
     this.espanol = {
       headers: {
-        header1: "HISTORIAL DE EMPLEO",
+        header1: "EMPLEOS",
         header2: "HABILIDADES",
         header3: "PROYECTOS",
         header4: "CERTIFICADOS",
